@@ -1,0 +1,30 @@
+---
+import Tile from "../components/Tile.astro";
+---
+
+<div class="container">
+  <h2 id="features">Why Regulus</h2>
+  <div class="tiles">
+    <Tile icon="/img/icon-seamless.svg" title="Seamless windows">
+      Every app gets its own RemoteApp connection, so it shows up as a real window with its own icon and title. There's no wrapping desktop behind it.
+    </Tile>
+    <Tile icon="/img/icon-sandbox.svg" title="One Flatpak">
+      QEMU, FreeRDP, and the agent all live inside the Flatpak sandbox. Close Regulus and Windows shuts down with it, so nothing keeps running in the background.
+    </Tile>
+    <Tile icon="/img/icon-wayland.svg" title="Wayland-native">
+      Windows are drawn straight to Wayland by <code>sdl-freerdp</code>. No XWayland, no flicker, and nothing relaunches itself.
+    </Tile>
+    <Tile icon="/img/icon-ltsc.svg" title="Light and long-lived">
+      Regulus installs Windows 11 or Windows 10 <strong>IoT Enterprise LTSC</strong>. It's a small, stable build that Microsoft supports for a decade.
+    </Tile>
+  </div>
+</div>
+
+<style>
+  .tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 2rem 1rem;
+    margin-top: 1.5rem;
+  }
+</style>

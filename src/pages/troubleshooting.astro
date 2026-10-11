@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHero from "../components/PageHero.astro";
+import Prose from "../components/Prose.astro";
+---
+
+<Layout
+  title="Troubleshooting"
+  description="Fixes for the problems people run into when setting up Regulus."
+>
+  <PageHero
+    title="Troubleshooting"
+    description="Things that commonly go wrong, and how to get past them."
+  />
+
+  <Prose>
+    <h2>Regulus can't open /dev/kvm</h2>
+    <p>Your user needs access to the KVM device. On most distributions you add yourself to the <code>kvm</code> group and log back in:</p>
+    <pre><code>sudo usermod -aG kvm "$USER"</code></pre>
+    <p>If <code>/dev/kvm</code> doesn't exist at all, hardware virtualization is probably turned off in your firmware. The <a href="/enable-virtualization/">enable virtualization guide</a> covers that.</p>
+
+    <h2>Windows never finishes installing</h2>
+    <p>The first run downloads a full Windows image and installs it, which can take a while on a slow connection. Let it finish. If it stalls for good, remove the machine in Regulus and start again.</p>
+
+    <h2>An app doesn't show up</h2>
+    <p>Regulus discovers apps through its agent inside Windows, Leo. Install what you need with <code>winget</code> inside the Windows session, then refresh the app list in Regulus.</p>
+
+    <h2>There's no sound</h2>
+    <p>Sound comes through the RDP stream. Make sure your host is running PipeWire and that the app isn't muted inside Windows.</p>
+
+    <h2>Still stuck?</h2>
+    <p>Search the <a href="https://github.com/maybejaishkhan/regulus/issues">issue tracker</a> first, and open a new issue if nothing matches.</p>
+  </Prose>
+</Layout>

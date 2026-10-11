@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" aria-hidden="true">
+  <g fill="#7a6bd0" opacity="0.35">
+    <path d="M0 1024 340 1024 0 684Z"/>
+    <path d="M300 1024 640 1024 300 684Z"/>
+    <path d="M600 1024 940 1024 600 684Z"/>
+    <path d="M900 1024 1024 1024 1024 900Z"/>
+    <path d="M0 660 260 660 0 400Z"/>
+    <path d="M240 660 500 660 240 400Z"/>
+  </g>
+  <g fill="#5b4bb0" opacity="0.30">
+    <path d="M0 400 200 400 0 200Z"/>
+    <path d="M480 1024 720 1024 480 784Z"/>
+  </g>
+</svg>

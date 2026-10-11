@@ -1,0 +1,78 @@
+---
+// Site header. Must be rendered inside a `.hero` element so the text colour
+// context from the hero band applies.
+---
+
+<section class="header">
+  <h2 id="logo">
+    <a href="/">
+      <img src="/img/appicon.svg" alt="" width="26" height="26" />
+      Regulus
+    </a>
+  </h2>
+  <ul class="nav">
+    <li><a href="/download/">Download</a></li>
+    <li><a href="/faq/">FAQ</a></li>
+    <li><a href="https://github.com/maybejaishkhan/regulus">GitHub</a></li>
+  </ul>
+</section>
+
+<style>
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    width: 100%;
+    max-width: var(--pagewidth);
+    margin: 0 auto;
+    padding: 1.25rem var(--grid-gap);
+  }
+
+  #logo {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 800;
+  }
+
+  #logo a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  #logo img {
+    border-radius: 7px;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 0;
+    list-style: none;
+  }
+
+  .nav a {
+    display: inline-block;
+    padding: 0.35rem 0.9rem;
+    border-radius: var(--pill);
+    color: inherit;
+    font-weight: 500;
+  }
+
+  .nav a:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .nav a:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+    }
+  }
+</style>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 450" width="1920" height="450" role="img" aria-label="Several Windows applications shown as separate native windows">
+  <defs>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3584e4"/>
+      <stop offset="1" stop-color="#62a0ea"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- left window -->
+  <g filter="url(#shadow)">
+    <rect x="380" y="150" width="360" height="240" rx="16" fill="#ffffff" opacity="0.92"/>
+    <path d="M380 166a16 16 0 0 1 16-16h328a16 16 0 0 1 16 16v30H380z" fill="#d4e3f7"/>
+    <circle cx="406" cy="173" r="6" fill="#e01b24"/>
+    <circle cx="428" cy="173" r="6" fill="#f5c211"/>
+    <circle cx="450" cy="173" r="6" fill="#2ec27e"/>
+    <rect x="404" y="220" width="250" height="12" rx="6" fill="#c0d5f5"/>
+    <rect x="404" y="248" width="200" height="12" rx="6" fill="#d5e2f2"/>
+    <rect x="404" y="276" width="230" height="12" rx="6" fill="#d5e2f2"/>
+    <rect x="404" y="304" width="160" height="12" rx="6" fill="#e3ecf7"/>
+  </g>
+
+  <!-- right window -->
+  <g filter="url(#shadow)">
+    <rect x="1180" y="150" width="360" height="240" rx="16" fill="#ffffff" opacity="0.92"/>
+    <path d="M1180 166a16 16 0 0 1 16-16h328a16 16 0 0 1 16 16v30h-360z" fill="#d4e3f7"/>
+    <circle cx="1206" cy="173" r="6" fill="#e01b24"/>
+    <circle cx="1228" cy="173" r="6" fill="#f5c211"/>
+    <circle cx="1250" cy="173" r="6" fill="#2ec27e"/>
+    <rect x="1204" y="220" width="210" height="12" rx="6" fill="#c0d5f5"/>
+    <rect x="1204" y="248" width="260" height="12" rx="6" fill="#d5e2f2"/>
+    <rect x="1204" y="276" width="180" height="12" rx="6" fill="#d5e2f2"/>
+    <rect x="1204" y="304" width="240" height="12" rx="6" fill="#e3ecf7"/>
+  </g>
+
+  <!-- front window -->
+  <g filter="url(#shadow)">
+    <rect x="740" y="90" width="440" height="300" rx="18" fill="#ffffff"/>
+    <path d="M740 108a18 18 0 0 1 18-18h404a18 18 0 0 1 18 18v34H740z" fill="url(#bar)"/>
+    <circle cx="770" cy="115" r="7" fill="#e01b24"/>
+    <circle cx="794" cy="115" r="7" fill="#f5c211"/>
+    <circle cx="818" cy="115" r="7" fill="#2ec27e"/>
+    <rect x="774" y="176" width="300" height="16" rx="8" fill="#c0d5f5"/>
+    <rect x="774" y="212" width="360" height="16" rx="8" fill="#d5e2f2"/>
+    <rect x="774" y="248" width="240" height="16" rx="8" fill="#d5e2f2"/>
+    <rect x="774" y="284" width="320" height="16" rx="8" fill="#e3ecf7"/>
+    <rect x="774" y="320" width="180" height="16" rx="8" fill="#e3ecf7"/>
+  </g>
+</svg>

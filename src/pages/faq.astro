@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHero from "../components/PageHero.astro";
+import Prose from "../components/Prose.astro";
+---
+
+<Layout
+  title="FAQ"
+  description="Common questions about Regulus, the Flatpak that runs Windows apps on your Linux desktop."
+>
+  <PageHero
+    title="Frequently asked questions"
+    description="Short answers to the things people ask most."
+  />
+
+  <Prose>
+    <h2>Do I need to install Windows first?</h2>
+    <p>No. On first launch Regulus downloads a Windows image and runs an unattended install for you. You just pick Windows 11 or Windows 10 IoT Enterprise LTSC and a preset.</p>
+
+    <h2>How is this different from Wine?</h2>
+    <p>Wine reimplements Windows APIs so apps can run directly on Linux. Regulus runs a real Windows machine in QEMU/KVM instead, and streams each app to your desktop over RDP RemoteApp. Anything that runs on Windows should run here, with no compatibility work.</p>
+
+    <h2>Do I need Docker?</h2>
+    <p>No. Regulus manages its own QEMU/KVM virtual machine and drives it over QMP. There's no Docker and no dockur image in the stack.</p>
+
+    <h2>Does it work on Wayland?</h2>
+    <p>Yes. Windows are drawn straight to Wayland by <code>sdl-freerdp</code>, so there's no XWayland involved.</p>
+
+    <h2>Which Linux distributions are supported?</h2>
+    <p>Any distribution that can run Flatpaks and expose the KVM device. Your CPU needs Intel VT-x or AMD-V, and your user has to be able to open <code>/dev/kvm</code>.</p>
+
+    <h2>Is it ready to use every day?</h2>
+    <p>Not yet. Regulus is pre-release, so expect rough edges. If you hit one, <a href="https://github.com/maybejaishkhan/regulus/issues">open an issue</a> and we'll take a look.</p>
+  </Prose>
+</Layout>

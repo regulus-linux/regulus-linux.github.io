@@ -1,0 +1,8 @@
+---
+import ColoredRow from "../components/ColoredRow.astro";
+---
+
+<ColoredRow>
+  <h2>How it works</h2>
+  <p class="narrow">Regulus manages its own QEMU/KVM virtual machine and drives it over QMP. There's no Docker and no dockur image underneath. It boots an unattended IoT LTSC install, then opens a separate FreeRDP <code>/app:</code> connection for each application, the same approach WinBoat and WinApps take. A small agent inside Windows, called <strong>Leo</strong>, looks after app discovery, icons, and <code>winget</code> installs.</p>
+</ColoredRow>

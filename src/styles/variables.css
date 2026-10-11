@@ -1,0 +1,57 @@
+:root {
+  /* Palette */
+  --blue1: rgb(153, 193, 241);
+  --blue2: rgb(98, 160, 234);
+  --blue3: rgb(53, 132, 228);
+  --blue5: rgb(26, 95, 180);
+  --light1: #fff;
+  --dark4: rgb(36, 31, 49);
+  --dark5: #000;
+  --red4: #c01c28;
+
+  /* Surfaces and controls */
+  --fg-color: #000;
+  --bg-color: #eee;
+  --btn-fg: #000;
+  --btn-bg: rgba(0, 0, 0, 0.08);
+  --btn-fg-dark: #fff;
+  --btn-bg-dark: rgba(255, 255, 255, 0.12);
+  --tile-bg: var(--blue1);
+  --imgopacity: 1;
+
+  /* Layout */
+  --pagewidth: 72rem;
+  /* content width */
+  --grid-gap: 1.5rem;
+  /* outer gutter */
+  --narrowwidth: 44rem;
+  --defaultsize: 18px;
+
+  /* Radii and motion */
+  --radius: 12px;
+  --radius-small: 0.8rem;
+  --pill: 500px;
+  --slickease: cubic-bezier(0.17, 0.89, 0.32, 1.28);
+
+  /* Type */
+  --inter: InterVariable, "Inter Variable", Inter, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1, "cv05" 1;
+  /* Inter features */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg-color: #eee;
+    --bg-color: #111;
+    --btn-fg: var(--btn-fg-dark);
+    --btn-bg: var(--btn-bg-dark);
+    --tile-bg: var(--blue3);
+    --imgopacity: 0.85;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --grid-gap: 1rem;
+  }
+}

@@ -1,0 +1,43 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+}
+
+const { icon, title } = Astro.props;
+---
+
+<div class="tile">
+  <img alt="" src={icon} />
+  <div class="description">
+    <h4>{title}</h4>
+    <p><slot /></p>
+  </div>
+</div>
+
+<style>
+  .tile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .tile img {
+    width: 100%;
+    height: 6rem;
+    object-fit: contain;
+    background-color: color-mix(in srgb, var(--tile-bg) 30%, transparent);
+    border: 1px solid var(--tile-bg);
+    border-radius: var(--radius);
+  }
+
+  .tile h4 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .tile p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+</style>

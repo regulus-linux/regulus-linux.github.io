@@ -1,0 +1,15 @@
+---
+import ColoredRow from "../components/ColoredRow.astro";
+import Button from "../components/Button.astro";
+---
+
+<ColoredRow id="install">
+  <h2>Get Regulus</h2>
+  <p class="narrow">Regulus ships as a Flatpak. While it's still pre-release, you build and install it from source:</p>
+  <pre><code>git clone https://github.com/maybejaishkhan/regulus
+cd regulus
+flatpak-builder --force-clean --user --install --ccache build-dir packages/flatpak/dev.jaish.Regulus.yml
+flatpak run dev.jaish.Regulus</code></pre>
+  <p class="narrow">Then pick <strong>Windows 11</strong> or <strong>Windows 10</strong> IoT Enterprise LTSC, choose a preset, and let Regulus download the image and set up Windows for you.</p>
+  <p><Button variant="dark" standalone href="https://github.com/maybejaishkhan/regulus">Source &amp; issues</Button></p>
+</ColoredRow>

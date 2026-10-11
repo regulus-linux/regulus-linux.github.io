@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHero from "../components/PageHero.astro";
+import Prose from "../components/Prose.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout
+  title="Download"
+  description="How to build and install Regulus, the Flatpak that runs Windows apps on your Linux desktop."
+>
+  <PageHero
+    title="Download"
+    description="Regulus ships as a Flatpak. It isn't on Flathub yet, so you build it from source for now."
+  />
+
+  <Prose>
+    <h2>Build and install</h2>
+    <p>You'll need <code>flatpak-builder</code> and the matching Flatpak SDK. Then clone the repository and build:</p>
+    <pre><code>git clone https://github.com/maybejaishkhan/regulus
+cd regulus
+flatpak-builder --force-clean --user --install --ccache build-dir packages/flatpak/dev.jaish.Regulus.yml
+flatpak run dev.jaish.Regulus</code></pre>
+
+    <h2>First run</h2>
+    <p>Pick Windows 11 or Windows 10 IoT Enterprise LTSC, choose a preset, and let Regulus download the image and set up Windows for you. The first run takes a while, since it's a full Windows install.</p>
+
+    <h2>What you need</h2>
+    <p>Regulus needs hardware virtualization. Your CPU has to expose Intel VT-x or AMD-V, and Linux has to give Regulus access to <code>/dev/kvm</code>. If you're not sure whether it's on, the <a href="/enable-virtualization/">enable virtualization guide</a> walks through it.</p>
+
+    <p><Button variant="suggested" href="https://github.com/maybejaishkhan/regulus">View on GitHub</Button></p>
+  </Prose>
+</Layout>

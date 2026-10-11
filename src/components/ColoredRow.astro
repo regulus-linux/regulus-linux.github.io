@@ -1,0 +1,39 @@
+---
+interface Props {
+  id?: string;
+}
+
+const { id } = Astro.props;
+---
+
+<section id={id}>
+  <div class="container">
+    <slot />
+  </div>
+</section>
+
+<style>
+  section {
+    background-color: var(--blue5);
+    color: #f6f5f4;
+    text-align: center;
+    padding: 2.5rem 0;
+    margin: 2rem 0;
+  }
+
+  /* The band provides the vertical space, so the container only centres. */
+  section .container {
+    margin: 0 auto;
+  }
+
+  /* Slotted content is not scoped to this component. */
+  section :global(a) {
+    color: #fff;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    section {
+      background-color: var(--dark4);
+    }
+  }
+</style>

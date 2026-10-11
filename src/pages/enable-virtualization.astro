@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHero from "../components/PageHero.astro";
+import Prose from "../components/Prose.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout
+  title="Enable virtualization"
+  description="How to turn on hardware virtualization (VT-x or AMD-V) so Regulus can run Windows on your machine."
+>
+  <PageHero
+    title="Enable virtualization"
+    description="Regulus needs hardware virtualization to run its Windows machine. This guide walks through turning it on."
+  />
+
+  <Prose>
+    <p class="small-print warning">This page is a placeholder. The full guide is still being written.</p>
+
+    <h2>1. Check whether it's already turned on</h2>
+    <p>Run this and look for <code>vmx</code> on Intel or <code>svm</code> on AMD:</p>
+    <pre><code>grep -E -m1 'vmx|svm' /proc/cpuinfo</code></pre>
+    <p>If you see a match, virtualization is already on and you can run Regulus.</p>
+
+    <h2>2. Turn it on in your firmware</h2>
+    <p>Reboot into your UEFI or BIOS settings and enable one of these, usually under <em>CPU</em> or <em>Security</em>:</p>
+    <ul>
+      <li>Intel: <strong>Intel Virtualization Technology (VT-x)</strong></li>
+      <li>AMD: <strong>SVM Mode</strong> or <strong>AMD-V</strong></li>
+    </ul>
+
+    <h2>3. Give Regulus access to KVM</h2>
+    <p>Make sure the KVM device exists and that your user can open it:</p>
+    <pre><code>ls -l /dev/kvm</code></pre>
+
+    <p><Button square href="/">Back to home</Button></p>
+  </Prose>
+</Layout>

@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHero from "../components/PageHero.astro";
+import Prose from "../components/Prose.astro";
+---
+
+<Layout
+  title="Contribute"
+  description="Ways to help with Regulus while it's still early."
+>
+  <PageHero
+    title="Contribute"
+    description="Regulus is early, and help is welcome."
+  />
+
+  <Prose>
+    <h2>Report bugs</h2>
+    <p>If something breaks, open an issue on <a href="https://github.com/maybejaishkhan/regulus/issues">GitHub</a>. Include your distribution, whether you're on Wayland or X11, and the steps to reproduce.</p>
+
+    <h2>Build and test</h2>
+    <p>The most useful thing right now is to run the pre-release build and tell us what's broken. The <a href="/download/">download page</a> has the commands.</p>
+
+    <h2>Send patches</h2>
+    <p>Pull requests are welcome on the <a href="https://github.com/maybejaishkhan/regulus">Regulus repository</a>. If you're planning something large, open an issue first so we can talk it through.</p>
+
+    <h2>Spread the word</h2>
+    <p>If Regulus is useful to you, a star on GitHub helps other people find it.</p>
+  </Prose>
+</Layout>

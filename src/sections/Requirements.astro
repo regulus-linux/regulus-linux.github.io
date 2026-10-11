@@ -1,0 +1,10 @@
+---
+import Split from "../components/Split.astro";
+import Button from "../components/Button.astro";
+---
+
+<Split id="requirements" image="/img/icon-ltsc.svg">
+  <h2>Requirements</h2>
+  <p>Regulus needs hardware virtualization. Your CPU has to expose Intel VT-x or AMD-V, and Linux has to be able to give Regulus access to the KVM device. That's all. QEMU, FreeRDP, and the rest come bundled.</p>
+  <p><Button square href="/enable-virtualization/">Enable virtualization</Button></p>
+</Split>

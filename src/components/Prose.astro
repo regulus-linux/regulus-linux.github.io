@@ -1,0 +1,18 @@
+---
+// Wraps a page's body copy in the standard narrow reading column.
+---
+
+<div class="container">
+  <article class="narrow prose">
+    <slot />
+  </article>
+</div>
+
+<style>
+  /* Slotted content is not scoped to this component. */
+  .prose :global(ul),
+  .prose :global(ol) {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+</style>

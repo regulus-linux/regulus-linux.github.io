@@ -1,0 +1,83 @@
+---
+import GitHubIcon from "./GitHubIcon.astro";
+
+const year = new Date().getFullYear();
+
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/download/", label: "Download" },
+  { href: "/enable-virtualization/", label: "Enable virtualization" },
+  { href: "/faq/", label: "FAQ" },
+  { href: "/troubleshooting/", label: "Troubleshooting" },
+  { href: "/contribute/", label: "Contribute" },
+];
+---
+
+<footer>
+  <div class="container">
+    <nav class="links">
+      {links.map((link) => <a href={link.href}>{link.label}</a>)}
+    </nav>
+    <div class="bottom">
+      <p class="copy">© {year} Regulus</p>
+      <a class="social" title="GitHub" href="https://github.com/maybejaishkhan/regulus" rel="me">
+        <GitHubIcon />
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: #1a1622;
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: auto;
+  }
+
+  footer .container {
+    margin: 0 auto;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .links a {
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 500;
+  }
+
+  .links a:hover {
+    color: #fff;
+  }
+
+  .bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 1.5rem;
+  }
+
+  .copy {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.75;
+  }
+
+  .social {
+    display: inline-flex;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 150ms ease-out;
+  }
+
+  .social:hover {
+    color: #fff;
+  }
+</style>

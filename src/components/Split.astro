@@ -1,0 +1,50 @@
+---
+interface Props {
+  id?: string;
+  image: string;
+  alt?: string;
+}
+
+const { id, image, alt = "" } = Astro.props;
+---
+
+<div class="container split" id={id}>
+  <div class="split-text">
+    <slot />
+  </div>
+  <picture class="split-img">
+    <img src={image} alt={alt} />
+  </picture>
+</div>
+
+<style>
+  .split {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: var(--grid-gap);
+    align-items: center;
+  }
+
+  .split-text {
+    max-width: 36rem;
+  }
+
+  .split-img {
+    opacity: var(--imgopacity);
+  }
+
+  .split-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .split {
+      grid-template-columns: 1fr;
+    }
+
+    .split-img {
+      order: -1;
+    }
+  }
+</style>

@@ -1,0 +1,74 @@
+---
+import Header from "../components/Header.astro";
+import Button from "../components/Button.astro";
+---
+
+<div class="hero">
+  <Header />
+
+  <div class="punchline">
+    <picture id="platform">
+      <img
+        alt="Windows applications shown as native Linux windows"
+        src="/img/hero.svg"
+        fetchpriority="high"
+      />
+    </picture>
+    <h1 id="subtitle">Run your favourite Windows apps on your Linux desktop.</h1>
+  </div>
+
+  <p class="actions">
+    <Button variant="suggested" href="#install">Get started</Button>
+    <Button href="https://github.com/maybejaishkhan/regulus">View on GitHub</Button>
+  </p>
+</div>
+
+<style>
+  .punchline {
+    padding: 2rem var(--grid-gap) 0;
+  }
+
+  #platform {
+    max-width: var(--pagewidth);
+    margin: 0 auto;
+  }
+
+  #platform img {
+    width: 100%;
+    height: auto;
+  }
+
+  #subtitle {
+    max-width: 24ch;
+    margin: 1rem auto 0;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+  }
+
+  .actions {
+    margin: 0;
+    padding: 1.5rem var(--grid-gap) 2.5rem;
+  }
+
+  /* The buttons are their own component, so reach them with :global(). */
+  .hero :global(.btn) {
+    color: var(--btn-fg);
+    background-color: transparent;
+    box-shadow: 0 0 0 2px var(--btn-fg);
+  }
+
+  .hero :global(.btn:hover) {
+    box-shadow: 0 0 0 4px var(--btn-fg);
+  }
+
+  .hero :global(.btn.suggested) {
+    color: var(--light1);
+    background-color: var(--blue3);
+    border: 2px solid var(--blue3);
+    box-shadow: none;
+  }
+
+  .hero :global(.btn.suggested:hover) {
+    box-shadow: 0 0 0 3px var(--blue3);
+  }
+</style>
